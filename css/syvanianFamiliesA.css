@@ -211,15 +211,15 @@ section > .sec02{
     position: relative;
 }
 .newP > .newprod:nth-child(1) .newprodphoto{
-    background: url(/image/new01.png) 50% 50% no-repeat;
+    background: url(/ex/image/new01.png) 50% 50% no-repeat;
     background-size: cover;
 }
 .newP > .newprod:nth-child(2) .newprodphoto{
-    background: url(/image/new02.png) 50% 50% no-repeat;
+    background: url(/ex/image/new02.png) 50% 50% no-repeat;
     background-size: cover;
 }
 .newP > .newprod:nth-child(3) .newprodphoto{
-    background: url(/image/new03.png) 50% 50% no-repeat;
+    background: url(/ex/image/new03.png) 50% 50% no-repeat;
     background-size: cover;
 } */
 
