@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 :root{
-    --text-color: #f0f4f5;
-    --background-color : pink;
-    --accent-color: #f1f1f1;
+    --text-color: #656b70;
+    --background-color : #FFF1F2;
+    --accent-color: #33373a;
 }
 *{  margin: 0;
     /* padding: 0; */
@@ -24,7 +24,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: pink;
+    background-color: #ffffff;
     padding: 8px 12px;
 }
 
@@ -42,7 +42,8 @@ a{
     padding: 8px 20px;    
 }
 .navmenu li:hover{
-    background-color: black;
+    background-color: #FFF1F2;
+    border-radius: 30px;
 }
 .navsns{
     list-style: none;
@@ -109,10 +110,11 @@ a{
     color: var(--text-color);
     padding: 10px 15px;
     display: block;
+    color: #fff;
     background: #FF8A8D;
     text-align: center;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     border-radius: 90px;
 }
 .swiper {
@@ -142,92 +144,137 @@ a{
     display: flex;
     height: 204px;
     margin: auto;
+    overflow: hidden;
 
     /* padding: 0 120px; */
 }
 .leftbanner{
-    background-color: var(--background-color);
+    background-color: #FFAEB3;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 .leftbanner p{
     color: var(--text-color);
     font-size: 24px;
     align-items: center;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .rightbanner{
-    background-color: #D6CCFF;
+    background: linear-gradient(to right,#D6CCFF, #AEE2FF );
     width: 100%;
     align-items: center;
+    position: relative;
+}
+.rightbanner p{
+    color: var(--text-color);
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-weight: 600;
+
 }
 .topbanner img{
     margin: auto;
     display: block;
 }
+.rightbanner img{
+    position: relative;
+    top: 50px;
+}
 /* sec-02 */
-/* section .sec02{
+section.sec02{
     width: 1200px;
-    height: 550px;
-    padding: 70px 0;
+    height: auto;
+    margin: auto;
+    position: relative;
 }
-section.sec02.inner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-}
-section.sec02 h2{
-    text-align: center;
-    width: 250px;
-    font-size: 2.5rem;
-    font-weight: 600;
-    background: black;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-section > .sec02{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 70px 0 0 0;
-}
-.newp{
-    display: block;
-
-}
-.newP > .newprod{
-    width: 409px;
-    height: 485px;
-    background-color: lemonchiffon;
+section.sec02 .inner02{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.newP > .newprod .newprodphoto{
+section.sec02 h2{
+    text-align: center;
+    width: 250px;
+    font-size: 36px;
+    font-weight: 600;    
+}
+section.sec02 .inner02 > .newprod{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 0 0 0;
+}
+.newprod > .new{
     width: 409px;
+    height: 423px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+.newprod > .new .photo{
+    width: 100%;
     height: 307px;
     position: relative;
+    margin-bottom: 20px;
 }
-.newP > .newprod:nth-child(1) .newprodphoto{
-    background: url(/ex/image/new01.png) 50% 50% no-repeat;
+.newprod > .new:nth-child(1) .photo{
+    background: url(/ex/image/new01.png) no-repeat;
     background-size: cover;
 }
-.newP > .newprod:nth-child(2) .newprodphoto{
-    background: url(/ex/image/new02.png) 50% 50% no-repeat;
+.newprod > .new:nth-child(2) .photo{
+    background: url(/ex/image/new02.png) no-repeat;
     background-size: cover;
 }
-.newP > .newprod:nth-child(3) .newprodphoto{
-    background: url(/ex/image/new03.png) 50% 50% no-repeat;
+.newprod > .new:nth-child(3) .photo{
+    background: url(/ex/image/new03.png) no-repeat;
     background-size: cover;
-} */
+}
+/* .newprod > .new span:first-of-type{ width: 90%; } */
+.newprod > .new span:first-of-type{ margin: 0 0 20px 0; }
+.newprod > .new span:first-of-type{
+    font-size: 20px;
+    color: #3d3d3d;
+    font-weight: 500;
+}
+.newprod > .new .buybtn{
+    background-color: #FFDF8C;
+    padding: 7px 20px 11px 20px;
+    border-radius: 90px;
+    color: #ffffff;
+    font-weight: 600;
+}
 
 
 /* sec-03 */
 .sec03{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 100%;
+}
+.sec03 > .btn02{
+    background-color: #ffffff;
+    padding: 7px 20px 11px 20px;
+    border: 1px solid #000;
+    border-radius: 90px;
+    color: #000;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    margin: 15px 0 15px 0;
 }
 .sec03 h2{
     text-align: center;
@@ -264,6 +311,7 @@ section > .sec02{
     width: 100%;
     margin: auto;
     display: block;
+    object-fit: cover;
     
 }
 
@@ -282,14 +330,38 @@ section > .sec02{
     display: flex;
     border-spacing: 150px;
     align-items: center;
+    justify-content: center;
     font-size: 30px;
 }
 .sec04 .bottom01,.bottom02,.bottom03{
     align-items: center;
+    justify-content: center;
     padding: 0;
-    margin: 120px;
+    margin: 70px;
     background-color: #fff;
     width: 300px;
     height: 350px;
     border-radius: 30px;
 }
+
+.storemap{
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+}
+.storemap img{
+    border-radius: 30px;
+}
+/* .storemap p{
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    margin: 10px;
+    font-size: 25px;
+}
+.storemap > .online{
+    position: absolute;
+    bottom: 5px;
+    right: 200px;
+    margin: 10px;
+} */
