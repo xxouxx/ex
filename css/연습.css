@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* :root{
+    --text-color: #656b70;
+    --background-color : #FFF1F2;
+    --accent-color: #33373a;
+} */
+*{  margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+/* img{
+    margin: auto;
+    display: block;
+} */
+a{
+    text-decoration: none;
+    color:#ffffff;
+    /* color: black; */
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffa4bb;
+    padding: 15px 12px;
+}
+
+.navlogo{
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.navmenu{
+    display: flex;
+  
+    list-style: none;
+    padding-left: 0;
+}
+.navmenu li{
+    padding: 8px 20px;
+    position: relative;
+    justify-content: space-around;
+    
+    
+}
+.navmenu li::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background: #fff999;
+    transition: all .5s ease-out;
+    
+}
+.navmenu li:hover::after{
+    width: 80%;
+}
+/* .navmenu li:hover{
+    background-color: #ff668c;    
+} */
+.navmenu li .submenu{
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width:300px;
+  list-style: none;
+  padding-left: 0;
+  display: none;
+  flex-direction: column;
+  background-color: rgb(214, 196, 255);
+
+}
+.sbsbmn{
+  list-style: none;
+}
+.navsns{
+    list-style: none;
+    color: #ffffff;
+    display: flex;
+}
+.navsns a{
+    padding: 8px 12px;
+    padding-left: 0;
+    font-size: 24px;
+
+}
+.nav_toogleBT{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #ffffff;
+
+}
+.submenu{
+  display: none;
+}
+.navmenu > li.active .submenu{
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+    }
+    .navmenu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navmenu li{
+        width: 100%;
+        text-align: center;        
+    }
+    .navsns{
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+   
+    .nav_toogleBT{
+        display: block;
+    }
+
+    .navmenu.active,
+    .navsns.active{
+        display: flex;
+    }
+    .submenu, .sbsbmn{
+      display: none;
+    }
+    .submenu.active,
+    .sbsbmn.active{
+      display: flex;
+      flex-direction: column;
+    } 
+
+     .submenu li.active{
+      display: flex;
+  
+    }
+}
