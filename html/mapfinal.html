@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/ex/css/mapfinal.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="navlogo"><i class="fa-solid fa-cat"></i> SLYVANIANFAMILIES</a>
+            <ul class="navmenu">
+                <li><a href="#">HOME</a></li>
+                <li>
+                    <a href="#" class="product">PRODUCT</a>
+                    <ul class="submenu">
+                        <li><a href="#">New Products</a></li>
+                        <li><a href="#">Featured Products</a></li>
+                        <li><a href="#">Season Special</a></li>
+                        <li>
+                            <a href="#">All Products</a>
+                            <ul class="sbsbmn">
+                                <li><a href="#">Blind Bag</a></li>
+                                <li><a href="#">타운 시리즈</a></li>
+                                <li><a href="#">집</a></li>
+                                <li><a href="#">가족인형 시리즈</a></li>
+                                <li><a href="#">아기인형 시리즈</a></li>
+                                <li><a href="#">미니 가방 시리즈</a></li>
+                                <li><a href="#">초콜릿 토끼 가구 세트</a></li>
+                                <li><a href="#">가구&인형</a></li>
+                                <li><a href="#">가구&소품</a></li>
+                                <li><a href="#">스페셜 세트</a></li>
+                                <li><a href="#">아기용 소품</a></li>
+                                <li><a href="#">아웃도어 시리즈</a></li>
+                                <li><a href="#">병원 시리즈</a></li>
+                                <li><a href="#">유치원 시리즈</a></li>
+                                <li><a href="#">마켓 시리즈</a></li>
+                                <li><a href="#">학교 시리즈</a></li>
+                                <li><a href="#">해변 시리즈</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">PLAY</a></li>
+                <li><a href="#">BRAND STORY</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="navsns">
+                <!-- <a href="#" class="sns">toytron</a>
+                    <a href="#" class="sns">navercafe</a> -->
+                <a href="#" class="sns"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#" class="sns"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="sns"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <!-- 햄버거모양모바일 -->
+            <a href="#" class="nav_toogleBT">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <div class="sec01">
+        <div class="tabbtn">
+            <button id="tab01">오프라인</button>
+            <button id="tab02">온라인</button>
+        </div>
+        <div class="tabcontent">
+            <div class="contents">
+                <div class="offline">
+                    <div id="map" style="width:100%;height:500px;"></div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="online">
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>토이트론몰</p>
+                                    <p>(02)3471-1454,0521</p>
+                                    <a href="http://www.toytronmall.co.kr">http://www.toytronmall.co.kr</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>토이저러스 몰</p>
+                                    <p>1577-2500</p>
+                                    <a href="http://www.lottemart.com/">http://www.lottemart.com/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>신세계몰</p>
+                                    <p>1588-4249</p>
+                                    <a href="http://mall.shinsegae.com/">http://mall.shinsegae.com/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>롯데아이몰</p>
+                                    <p>080-000-1000</p>
+                                    <a href="http://www.lotteimall.com/">http://www.lotteimall.com/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>지에스홈쇼핑</p>
+                                    <p>080-414-4545</p>
+                                    <a href="http://www.gsshop.com/">http://www.gsshop.com/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>현대홈쇼핑</p>
+                                    <p>1600-0000</p>
+                                    <a href="http://www.hyundaihmall.com/">http://www.hyundaihmall.com/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>롯데닷컴</p>
+                                    <p>1577-1110</p>
+                                    <a href="http://www.lotte.com/">http://www.lotte.com/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>AK몰</p>
+                                    <p>1588-2055</p>
+                                    <a href="http://www.akmall.com/">http://www.akmall.com/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>G마켓</p>
+                                    <p>1566-5701</p>
+                                    <a href="http://www.gmarket.co.kr/">http://www.gmarket.co.kr/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>옥션</p>
+                                    <p>1588-0184</p>
+                                    <a href="http://www.auction.co.kr/">http://www.auction.co.kr/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>11번가</p>
+                                    <p>1599-0110</p>
+                                    <a href="http://www.11st.co.kr">http://www.11st.co.kr</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>1300K</p>
+                                    <p>1544-0132</p>
+                                    <a href="http://www.1300k.com/">http://www.1300k.com/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>텐바이텐</p>
+                                    <p>1644-6030</p>
+                                    <a href="http://www.10x10.co.kr/">http://www.10x10.co.kr/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>바보사랑</p>
+                                    <p>1544-7780</p>
+                                    <a href="http://www.babosarang.co.kr/">http://www.babosarang.co.kr/</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>CJ몰</p>
+                                    <p>1644-2525</p>
+                                    <a href="http://www.cjmall.com">http://www.cjmall.com</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <li>
+                            <div class="inner">
+                                <div class=" des">
+                                    <p>홈앤쇼핑</p>
+                                    <p>1666-1111</p>
+                                    <a href="http://www.hnsmall.com">http://www.hnsmall.com</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d5c5e886b6cf0948622d55f86d99da70"></script>
+    <script src="/ex/js/mapfinal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/ex/js/sylvanian.js" defer></script>
+
+</body>
+
+</html>
