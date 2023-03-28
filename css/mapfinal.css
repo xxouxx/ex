@@ -1,0 +1,255 @@
+@charset "UTF-8";
+*{  margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    /* overflow-x : hidden; */
+    /* background: #f5f5f5; */
+}
+body{background: #f5f5f5; }
+/* 헤더 */
+header{
+    position: relative;
+    z-index: 10;
+  }
+  .navbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff9fb;
+      padding: 15px 12px;
+  }
+  
+  .navlogo{
+      font-size: 24px;
+      color: #686868;
+  }
+  
+  .navmenu{
+      display: flex;  
+      list-style: none;
+      padding-left: 0;
+      justify-content: center;
+      align-items: center;
+  }
+  .navmenu li{
+      padding: 5px 20px;
+      position: relative;
+      justify-content: space-around;
+      text-align: center;
+      
+      
+  }
+  .navmenu li::after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 4px;
+      background: #999fff;
+      transition: all .5s ease-out;
+      
+  }
+  .navmenu li:hover::after{
+      width: 80%;
+  }
+  /* .navmenu li:hover{
+      background-color: #ff668c;    
+  } */
+  .navmenu li .submenu{
+    position: absolute;
+    top: 57px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:300px;
+    list-style: none;
+    padding-left: 0;
+    display: none;
+    flex-direction: column;
+    background-color: rgb(214, 196, 255);
+  
+  }
+  .sbsbmn{
+    list-style: none;
+  }
+  .navsns{
+      list-style: none;
+      color: #ffffff;
+      display: flex;
+  }
+  .navsns a{
+      padding: 8px 12px;
+      padding-left: 0;
+      font-size: 24px;
+  
+  }
+  .nav_toogleBT{
+      display: none;
+      position: absolute;
+      right: 32px;
+      font-size: 24px;
+      color: #575757;
+  
+  }
+  .submenu{
+    display: none;
+  }
+  .navmenu > li.active .submenu{
+    display: flex;
+  }
+  
+  @media screen and (max-width: 768px) {
+      .navbar{
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 8px 12px;
+          
+  
+      }
+      .navbar.active{
+        position: fixed;
+          width: 100%;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          justify-content: flex-start;
+          overflow: auto;
+      }
+      .navmenu{
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+      }
+      .navmenu li .submenu{
+        /* height: 100%; */
+        width: 100%;
+        margin:10px;
+        padding: 10px;
+        /* padding-bottom: 50px; */
+        top: 0;
+        
+      }
+  
+      .navmenu li{
+          width: 100%;
+          height: 100%;
+          display: contents;
+          text-align: center;  
+          /* padding: 10px;    
+          margin: 10px;   */
+      }
+      .navsns{
+          display: none;
+          justify-content: center;
+          width: 100%;
+      }
+     
+      .nav_toogleBT{
+          display: block;
+      }
+  
+  
+      .navbar.active .navmenu,
+      .navsns.active{
+          display: flex;
+      }
+      .navmenu > li.active .submenu{
+        position: relative;
+      }
+  }
+
+
+
+
+/* 버튼 */
+.sec01{
+    
+    width: 1200px;
+    margin: 0 auto;
+}
+.tabbtn{
+    width: 1200px;
+    margin: 30px 0 20px 0;
+    display: flex;
+    gap: 0 10px;
+    /* justify-content: flex-start; */
+    /* position: fixed; */
+}
+.tabbtn > button{
+    font-size: 1.125rem;
+    border-radius: 24px;
+    background: #dbd9d9;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;    
+}
+.tabbtn > button.on,
+.tabbtn > button:hover{
+    background: #000;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* 컨텐츠 */
+.tabcontent{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* gap: 0 40px; */
+}
+.tabcontent .contents{
+    display: none;
+    padding: 100px;
+    margin: 0;
+}
+/* 오프라인(맵) */
+.tabcontent .online{
+    width: 1200px;
+    gap: 20px 40px;
+    /* display: none; */
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    padding: 0 50px;
+
+}
+
+.tabcontent .contents.on{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 25px;
+    align-self: center;
+    
+    
+}
+.box{
+    flex: 1 1 25%;
+}
+.box li{
+    /* background: pink; */
+    margin: 0;
+    padding: 10px 5px;
+    /* border-radius: 20px; */
+    font-size: 1rem;
+    padding: 5px 10px;
+    list-style: none; 
+    display: contents;
+}
+
+
