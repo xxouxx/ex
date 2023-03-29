@@ -1,0 +1,28 @@
+@charset "UTF-8";
+* {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Changa One', cursive;
+}
+body {
+    width: 1200px;
+}
+.nb {
+    display: block;
+    margin: auto;
+    position: relative;
+}
+/* .nb:hover {
+    transform: rotateY(180deg)
+} */
+a {
+    font-size: 64px;
+    text-decoration: none;
+    color: black;
+}
+.btn {
+    position: absolute;
+    width: 233px;
+    height: 74px;
+    right: 300px;
+    bottom: 150px;
+}
